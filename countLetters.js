@@ -1,10 +1,21 @@
-function countLetters() {
-  var howmanyletters = {
-  specialLetters: ["l: 1", "i: 2", "g: 1", "h: 4", "t: 2", "o: 2", "u: 2", "s: 2", "e: 3", "n: 1"]
+
+//input a "string" into the function, function named CountLetters
+function countLetters(input) {
+
+var letterCounts = {};
+
+for (var i = 0; i < input.length; i++) {
+  var letter = input[i];
+  if (letter === ' ') {
+    continue;
   }
-  return howmanyletters
+  if (letterCounts[letter] !== undefined) {
+    letterCounts[letter] += 1;
+  } else {
+    letterCounts[letter] = 1;
+  }
 }
-
- console.log(countLetters.howmanyletters)
-
-
+//outputs the characters and the # of characters
+return letterCounts;
+}
+console.log(countLetters("haha"))
