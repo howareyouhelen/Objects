@@ -18,4 +18,4 @@ for (var i = 0; i < input.length; i++) {
 //outputs the characters and the # of characters
 return letterCounts;
 }
-console.log(countLetters("haha"))
+console.log(countLetters("lighthouse is lit"))
